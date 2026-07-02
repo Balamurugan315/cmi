@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Verification | Gaming Admin</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="C:\Users\3203454\Documents\esports\styles\Admin-User-Verification.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+     <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">🎮</div>
+
+        <div>
+
+            <h2>GAMEVERSE</h2>
+
+            <span>Admin Panel</span>
+
+        </div>
+
+    </div>
+
+    <ul class="menu">
+
+        <li class="active">
+            <!-- Change active class for each page -->
+            <a href="Admin-Dashboard.html">
+                <i class="ri-dashboard-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-User-Verification.html">
+                <i class="ri-user-search-line"></i>
+                User Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Influencer-Verification.html">
+                <i class="ri-user-star-line"></i>
+                Influencer Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Brand-Verification.html">
+                <i class="ri-building-line"></i>
+                Brand Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Tournament.html">
+                <i class="ri-trophy-line"></i>
+                Tournament Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-subcriptions.html">
+                <i class="ri-vip-crown-line"></i>
+                Subscription Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Report.html">
+                <i class="ri-file-chart-line"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Analytics.html">
+                <i class="ri-bar-chart-box-line"></i>
+                Analytics
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Settings.html">
+                <i class="ri-settings-3-line"></i>
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-activity-logs.html">
+                <i class="ri-history-line"></i>
+                Activity Logs
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-System-logs.html">
+                <i class="ri-server-line"></i>
+                System Status
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-support-tickets.html">
+                <i class="ri-customer-service-2-line"></i>
+                Support Tickets
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="ri-logout-box-r-line"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="ri-search-line"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search users, email or username...">
+
+            </div>
+
+            <div class="top-right">
+
+                <button class="notification">
+                    <i class="ri-notification-3-line"></i>
+                </button>
+
+                <button class="notification">
+                    <i class="ri-message-3-line"></i>
+                </button>
+
+                <div class="admin-profile">
+
+                    <img src="https://i.pravatar.cc/100?img=12" alt="Admin">
+
+                    <div>
+                        <h4>Admin User</h4>
+                        <span>Super Admin</span>
+                    </div>
+
+                    <i class="ri-arrow-down-s-line"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>User Verification</h1>
+
+                
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- STATISTICS -->
+        <!-- ========================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="icon purple">
+                    <i class="ri-group-line"></i>
+                </div>
+
+                <h5>All Users</h5>
+
+                <h2>5,742</h2>
+
+                <span>100%</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon orange">
+                    <i class="ri-time-line"></i>
+                </div>
+
+                <h5>Pending</h5>
+
+                <h2>128</h2>
+
+                <span>2.23%</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon green">
+                    <i class="ri-checkbox-circle-line"></i>
+                </div>
+
+                <h5>Approved</h5>
+
+                <h2>5,401</h2>
+
+                <span>94.06%</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon red">
+                    <i class="ri-close-circle-line"></i>
+                </div>
+
+                <h5>Rejected</h5>
+
+                <h2>213</h2>
+
+                <span>3.71%</span>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- PART 2 STARTS HERE -->
+        <!-- ========================= -->
+
+<!-- ========================================= -->
+<!-- FILTER SECTION -->
+<!-- ========================================= -->
+
+<section class="filter-card">
+
+    <div class="filter-top">
+
+        <div class="table-search">
+
+            <i class="ri-search-line"></i>
+
+            <input type="text"
+                   placeholder="Search by name, email or username...">
+
+        </div>
+
+        <div class="filters">
+
+            <select>
+                <option>Status</option>
+                <option>All</option>
+                <option>Pending</option>
+                <option>Approved</option>
+                <option>Rejected</option>
+            </select>
+
+            <select>
+                <option>Joined On</option>
+                <option>All Time</option>
+                <option>Today</option>
+                <option>This Week</option>
+                <option>This Month</option>
+            </select>
+
+            <select>
+                <option>Role</option>
+                <option>All</option>
+                <option>User</option>
+                <option>Player</option>
+                <option>Tournament Organiser</option>
+            </select>
+
+            <select>
+                <option>Country</option>
+                <option>All</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>United Kingdom</option>
+            </select>
+
+            <button class="secondary-btn">
+
+                <i class="ri-filter-3-line"></i>
+
+                Filter
+
+            </button>
+
+            <button class="secondary-btn">
+
+                Reset
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CONTENT WRAPPER -->
+<!-- ========================================= -->
+
+<div class="content-wrapper">
+
+    <section class="table-card">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th></th>
+                    <th>User Details</th>
+                    <th>Role</th>
+                    <th>Joined On</th>
+                    <th>Status</th>
+                    <th>Documents</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <!-- USER 1 -->
+
+                <tr>
+
+                    <td>
+                        <input type="checkbox">
+                    </td>
+
+                    <td>
+
+                        <div class="user-info">
+
+                            <img src="images/user1.jpg" alt="User">
+
+                            <div>
+
+                                <h4>Rohit Sharma</h4>
+
+                                <span>rohit.sharma@email.com</span>
+
+                                <br>
+
+                                <span>+91 98765 43210</span>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>User</td>
+
+                    <td>
+
+                        12 May 2024
+
+                        <br>
+
+                        <small>10:30 AM</small>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge pending">
+
+                            Pending
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        2 / 3
+
+                        <br>
+
+                        <small>(Submitted)</small>
+
+                    </td>
+
+                    <td>
+
+                        <div class="table-actions">
+
+                            <button class="secondary-btn">View</button>
+
+                            <button class="approve-btn">
+
+                                Approve
+
+                            </button>
+
+                            <button class="reject-btn">
+
+                                Reject
+
+                            </button>
+
+                        </div>
+
+                        <button class="request-btn">
+
+                            Request Changes
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- USER 2 -->
+
+                <tr>
+
+                    <td><input type="checkbox"></td>
+
+                    <td>
+
+                        <div class="user-info">
+
+                            <img src="images/user2.jpg" alt="User">
+
+                            <div>
+
+                                <h4>GamerX Pro</h4>
+
+                                <span>gamerx@email.com</span>
+
+                                <br>
+
+                                <span>+91 91234 56789</span>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Player</td>
+
+                    <td>
+
+                        11 May 2024
+
+                        <br>
+
+                        <small>02:15 PM</small>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge pending">
+
+                            Pending
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        3 / 3
+
+                        <br>
+
+                        <small>(Submitted)</small>
+
+                    </td>
+
+                    <td>
+
+                        <div class="table-actions">
+
+                            <button class="secondary-btn">View</button>
+
+                            <button class="approve-btn">
+
+                                Approve
+
+                            </button>
+
+                            <button class="reject-btn">
+
+                                Reject
+
+                            </button>
+
+                        </div>
+
+                        <button class="request-btn">
+
+                            Request Changes
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- USER 3 -->
+
+                <tr>
+
+                    <td><input type="checkbox"></td>
+
+                    <td>
+
+                        <div class="user-info">
+
+                            <img src="images/user3.jpg" alt="User">
+
+                            <div>
+
+                                <h4>Neha Verma</h4>
+
+                                <span>neha@email.com</span>
+
+                                <br>
+
+                                <span>+91 99876 54321</span>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>User</td>
+
+                    <td>
+
+                        10 May 2024
+
+                        <br>
+
+                        <small>09:45 AM</small>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge approved">
+
+                            Approved
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        3 / 3
+
+                        <br>
+
+                        <small>(Verified)</small>
+
+                    </td>
+
+                    <td>
+
+                        <button class="secondary-btn">
+
+                            View
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- USER 4 -->
+
+                <tr>
+
+                    <td><input type="checkbox"></td>
+
+                    <td>
+
+                        <div class="user-info">
+
+                            <img src="images/user4.jpg" alt="User">
+
+                            <div>
+
+                                <h4>Shadow Playz</h4>
+
+                                <span>shadow@email.com</span>
+
+                                <br>
+
+                                <span>+91 90011 22334</span>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Player</td>
+
+                    <td>
+
+                        09 May 2024
+
+                        <br>
+
+                        <small>05:20 PM</small>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge pending">
+
+                            Pending
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        1 / 3
+
+                        <br>
+
+                        <small>(Submitted)</small>
+
+                    </td>
+
+                    <td>
+
+                        <div class="table-actions">
+
+                            <button class="secondary-btn">View</button>
+
+                            <button class="approve-btn">Approve</button>
+
+                            <button class="reject-btn">Reject</button>
+
+                        </div>
+
+                        <button class="request-btn">
+
+                            Request Changes
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <!-- USER 5 -->
+
+                <tr>
+
+                    <td><input type="checkbox"></td>
+
+                    <td>
+
+                        <div class="user-info">
+
+                            <img src="images/user5.jpg" alt="User">
+
+                            <div>
+
+                                <h4>Arjun Gaming</h4>
+
+                                <span>arjun@email.com</span>
+
+                                <br>
+
+                                <span>+91 88822 33445</span>
+
+                            </div>
+
+                        </div>
+
+                    </td>
+
+                    <td>Tournament Organiser</td>
+
+                    <td>
+
+                        08 May 2024
+
+                        <br>
+
+                        <small>11:05 AM</small>
+
+                    </td>
+
+                    <td>
+
+                        <span class="badge rejected">
+
+                            Rejected
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        2 / 3
+
+                        <br>
+
+                        <small>(Submitted)</small>
+
+                    </td>
+
+                    <td>
+
+                        <button class="secondary-btn">
+
+                            View
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ========================= -->
+    <!-- PART 3 STARTS HERE -->
+    <!-- ========================= -->
+
+<!-- ========================================= -->
+<!-- USER DETAILS PANEL -->
+<!-- ========================================= -->
+
+<aside class="details-panel">
+
+    <!-- USER PROFILE -->
+
+    <div class="panel-card">
+
+        <h3>User Details</h3>
+
+        <div class="profile-card">
+
+            <img src="images/user1.jpg" alt="User">
+
+            <h2>Rohit Sharma</h2>
+
+            <p>@rohit_sharma07</p>
+
+            <span>Pending Verification</span>
+
+        </div>
+
+        <div class="profile-info">
+
+            <div class="info-row">
+                <span>Username</span>
+                <strong>rohit_sharma07</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Email</span>
+                <strong>rohit@email.com</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Phone</span>
+                <strong>+91 98765 43210</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Role</span>
+                <strong>User</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Country</span>
+                <strong>India</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Joined On</span>
+                <strong>12 May 2024</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DOCUMENTS -->
+
+    <div class="panel-card">
+
+        <h3>Documents Submitted</h3>
+
+        <ul class="document-list">
+
+            <li>
+                <span>Aadhaar Card</span>
+                <button class="secondary-btn">View</button>
+            </li>
+
+            <li>
+                <span>PAN Card</span>
+                <button class="secondary-btn">View</button>
+            </li>
+
+            <li>
+                <span>Selfie Verification</span>
+                <button class="secondary-btn">View</button>
+            </li>
+
+        </ul>
+
+    </div>
+
+    <!-- ADDITIONAL DETAILS -->
+
+    <div class="panel-card">
+
+        <h3>Additional Information</h3>
+
+        <div class="profile-info">
+
+            <div class="info-row">
+                <span>Date of Birth</span>
+                <strong>18 Jan 2002</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Gender</span>
+                <strong>Male</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Email Verified</span>
+                <strong>Yes</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Phone Verified</span>
+                <strong>Yes</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Account Status</span>
+                <strong>Active</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ADMIN NOTES -->
+
+    <div class="panel-card">
+
+        <h3>Admin Notes</h3>
+
+        <textarea rows="6"
+            placeholder="Enter verification notes..."></textarea>
+
+    </div>
+
+    <!-- ACTION BUTTONS -->
+
+    <div class="panel-card">
+
+        <h3>Verification Actions</h3>
+
+        <div class="action-buttons">
+
+            <button class="approve-btn">
+
+                <i class="ri-checkbox-circle-line"></i>
+
+                Approve
+
+            </button>
+
+            <button class="reject-btn">
+
+                <i class="ri-close-circle-line"></i>
+
+                Reject
+
+            </button>
+
+        </div>
+
+        <br>
+
+        <button class="request-btn">
+
+            <i class="ri-edit-line"></i>
+
+            Request Changes
+
+        </button>
+
+    </div>
+
+</aside>
+
+</div>
+
+<!-- ========================================= -->
+<!-- PAGINATION -->
+<!-- ========================================= -->
+
+<section class="pagination-area">
+
+    <div class="entries">
+
+        Show
+
+        <select>
+
+            <option>10</option>
+            <option>25</option>
+            <option>50</option>
+
+        </select>
+
+        Entries
+
+    </div>
+
+    <div class="pagination">
+
+        <button>
+            <i class="ri-arrow-left-s-line"></i>
+        </button>
+
+        <button class="active-page">1</button>
+
+        <button>2</button>
+
+        <button>3</button>
+
+        <button>4</button>
+
+        <span>...</span>
+
+        <button>12</button>
+
+        <button>
+            <i class="ri-arrow-right-s-line"></i>
+        </button>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

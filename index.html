@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameVerse esports and gaming platform admin dashboard">
+  <title>GameVerse Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+      <a href="#dashboard" class="brand" aria-label="GameVerse dashboard">
+        <span class="brand-mark">GV</span>
+        <span>
+          <strong>GameVerse</strong>
+          <small>Admin Control</small>
+        </span>
+      </a>
+      <nav class="nav-list" id="navList"></nav>
+    </aside>
+
+    <div class="mobile-backdrop" id="mobileBackdrop" hidden></div>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open navigation">Menu</button>
+        <div class="search-wrap">
+          <span aria-hidden="true">Search</span>
+          <input id="globalSearch" type="search" placeholder="Search users, brands, tournaments..." aria-label="Global search">
+          <div class="global-results" id="globalResults" hidden></div>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" aria-label="Notifications">N<span class="dot"></span></button>
+          <button class="icon-btn" aria-label="Messages">M</button>
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">D</button>
+          <button class="profile-btn" aria-label="Admin profile">
+            <span class="avatar">AX</span>
+            <span>Admin Xeno</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="page-head">
+        <div>
+          <p class="eyebrow">Esports Operations</p>
+          <h1 id="pageTitle">Dashboard</h1>
+        </div>
+        <div class="head-actions" id="headActions"></div>
+      </section>
+
+      <section id="view" class="view" tabindex="-1"></section>
+    </main>
+  </div>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-root" id="modalRoot" hidden></div>
+
+  <script src="scripts/storage.js"></script>
+  <script src="scripts/seed.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
+

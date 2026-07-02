@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Gaming & Esports Admin</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Remix Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+          rel="stylesheet"/>
+
+    <link rel="stylesheet"
+          href="C:\Users\3227076\Downloads\OneDrive_2026-07-01\Balamurugan - 3227076\styles\Admin-Settings.css">
+            <script src="../scripts/common.js"/>
+    <script src="../scripts/admin-utils.js">
+    </script>
+    <script src="../scripts/seed.js"></script>
+    <script src="../scripts/storage.js"></script>
+    <script src="../scripts/user-verification.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">🎮</div>
+
+        <div>
+
+            <h2>GAMEVERSE</h2>
+
+            <span>Admin Panel</span>
+
+        </div>
+
+    </div>
+
+    <ul class="menu">
+
+        <li class="active">
+            <!-- Change active class for each page -->
+            <a href="Admin-Dashboard.html">
+                <i class="ri-dashboard-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-User-Verification.html">
+                <i class="ri-user-search-line"></i>
+                User Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Influencer-Verification.html">
+                <i class="ri-user-star-line"></i>
+                Influencer Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Brand-Verification.html">
+                <i class="ri-building-line"></i>
+                Brand Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Tournament.html">
+                <i class="ri-trophy-line"></i>
+                Tournament Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-subcriptions.html">
+                <i class="ri-vip-crown-line"></i>
+                Subscription Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Report.html">
+                <i class="ri-file-chart-line"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Analytics.html">
+                <i class="ri-bar-chart-box-line"></i>
+                Analytics
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Settings.html">
+                <i class="ri-settings-3-line"></i>
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-activity-logs.html">
+                <i class="ri-history-line"></i>
+                Activity Logs
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-System-logs.html">
+                <i class="ri-server-line"></i>
+                System Status
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-support-tickets.html">
+                <i class="ri-customer-service-2-line"></i>
+                Support Tickets
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="ri-logout-box-r-line"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= Topbar ================= -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="ri-search-line"></i>
+
+                <input type="text"
+                       placeholder="Search users, influencers, brands, tournaments...">
+
+            </div>
+
+            <div class="top-right">
+
+                <button class="notification">
+
+                    <i class="ri-notification-3-line"></i>
+
+                </button>
+
+                <button class="notification">
+
+                    <i class="ri-mail-line"></i>
+
+                </button>
+
+                <div class="admin-profile">
+
+                    <img src="images/admin.jpg"
+                         alt="Admin">
+
+                    <div>
+
+                        <h4>Admin User</h4>
+
+                        <span>Super Admin</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Page Title ================= -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>Settings</h1>
+
+                <p>
+
+                    Dashboard /
+
+                    <span>Settings</span>
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ===================================== -->
+        <!-- ADMIN PROFILE -->
+        <!-- ===================================== -->
+
+        <section class="settings-card">
+
+            <div class="card-title">
+
+                <i class="ri-user-settings-line"></i>
+
+                <h2>Admin Profile</h2>
+
+            </div>
+
+            <div class="profile-wrapper">
+
+                <div class="profile-image">
+
+                    <img src="images/admin.jpg"
+                         alt="Admin">
+
+                    <button>
+
+                        <i class="ri-camera-line"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="profile-form">
+
+                    <div class="input-group">
+
+                        <label>Full Name</label>
+
+                        <input type="text"
+                               value="Admin User">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Email Address</label>
+
+                        <input type="email"
+                               value="admin@gameverse.com">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Phone Number</label>
+
+                        <input type="text"
+                               value="+91 98765 43210">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Role</label>
+
+                        <input type="text"
+                               value="Super Admin"
+                               readonly>
+
+                    </div>
+
+                    <div class="form-actions">
+
+                        <button class="primary-btn">
+
+                            <i class="ri-save-line"></i>
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- PART 2 STARTS HERE -->
+        <!-- ========================= -->
+
+<!-- ===================================== -->
+<!-- PLATFORM SETTINGS -->
+<!-- ===================================== -->
+
+<section class="settings-card">
+
+    <div class="card-title">
+
+        <i class="ri-global-line"></i>
+
+        <h2>Platform Settings</h2>
+
+    </div>
+
+    <div class="settings-grid">
+
+        <div class="input-group">
+
+            <label>Platform Name</label>
+
+            <input type="text"
+                   value="GameVerse">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Support Email</label>
+
+            <input type="email"
+                   value="support@gameverse.com">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Support Phone</label>
+
+            <input type="text"
+                   value="+91 98765 43210">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Default Language</label>
+
+            <select>
+
+                <option>English</option>
+
+                <option>Tamil</option>
+
+                <option>Hindi</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Time Zone</label>
+
+            <select>
+
+                <option>Asia/Kolkata (IST)</option>
+
+                <option>UTC</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Currency</label>
+
+            <select>
+
+                <option>INR (₹)</option>
+
+                <option>USD ($)</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="form-actions">
+
+        <button class="primary-btn">
+
+            <i class="ri-save-line"></i>
+
+            Save Settings
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SECURITY SETTINGS -->
+<!-- ===================================== -->
+
+<section class="settings-card">
+
+    <div class="card-title">
+
+        <i class="ri-lock-password-line"></i>
+
+        <h2>Security Settings</h2>
+
+    </div>
+
+    <div class="settings-grid">
+
+        <div class="input-group">
+
+            <label>Current Password</label>
+
+            <input type="password"
+                   placeholder="Enter current password">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>New Password</label>
+
+            <input type="password"
+                   placeholder="Enter new password">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>Confirm Password</label>
+
+            <input type="password"
+                   placeholder="Confirm new password">
+
+        </div>
+
+    </div>
+
+    <div class="form-actions">
+
+        <button class="primary-btn">
+
+            <i class="ri-lock-unlock-line"></i>
+
+            Change Password
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- PART 3 STARTS HERE -->
+<!-- ========================= -->
+
+<!-- ===================================== -->
+<!-- NOTIFICATION SETTINGS -->
+<!-- ===================================== -->
+
+<section class="settings-card">
+
+    <div class="card-title">
+
+        <i class="ri-notification-3-line"></i>
+
+        <h2>Notification Settings</h2>
+
+    </div>
+
+    <div class="notification-wrapper">
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>Email Notifications</h4>
+
+                <p>Receive email notifications for important updates.</p>
+
+            </div>
+
+            <label class="switch">
+
+                <input type="checkbox" checked>
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>New User Registrations</h4>
+
+                <p>Notify when a new user registers.</p>
+
+            </div>
+
+            <input type="checkbox" checked>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>Influencer Verification</h4>
+
+                <p>Notify when influencers apply for verification.</p>
+
+            </div>
+
+            <input type="checkbox" checked>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>Brand Verification</h4>
+
+                <p>Notify when brands apply for verification.</p>
+
+            </div>
+
+            <input type="checkbox" checked>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>Tournament Updates</h4>
+
+                <p>Notify when tournaments are created or updated.</p>
+
+            </div>
+
+            <input type="checkbox" checked>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>Subscription Alerts</h4>
+
+                <p>Notify when new subscriptions are purchased.</p>
+
+            </div>
+
+            <input type="checkbox" checked>
+
+        </div>
+
+        <div class="notification-item">
+
+            <div>
+
+                <h4>System Alerts</h4>
+
+                <p>Receive important system alerts.</p>
+
+            </div>
+
+            <input type="checkbox" checked>
+
+        </div>
+
+    </div>
+
+    <div class="form-actions">
+
+        <button class="primary-btn">
+
+            <i class="ri-save-line"></i>
+
+            Save Preferences
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SYSTEM INFORMATION -->
+<!-- ===================================== -->
+
+<section class="settings-card">
+
+    <div class="card-title">
+
+        <i class="ri-information-line"></i>
+
+        <h2>System Information</h2>
+
+    </div>
+
+    <div class="system-grid">
+
+        <div class="system-box">
+
+            <i class="ri-stack-line"></i>
+
+            <h4>Version</h4>
+
+            <span>1.0.0</span>
+
+        </div>
+
+        <div class="system-box">
+
+            <i class="ri-database-2-line"></i>
+
+            <h4>Database</h4>
+
+            <span>MySQL</span>
+
+        </div>
+
+        <div class="system-box">
+
+            <i class="ri-code-s-slash-line"></i>
+
+            <h4>Backend</h4>
+
+            <span>Spring Boot</span>
+
+        </div>
+
+        <div class="system-box">
+
+            <i class="ri-angularjs-line"></i>
+
+            <h4>Frontend</h4>
+
+            <span>Angular</span>
+
+        </div>
+
+        <div class="system-box">
+
+            <i class="ri-server-line"></i>
+
+            <h4>Server Status</h4>
+
+            <span class="online-status">
+
+                ● Online
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

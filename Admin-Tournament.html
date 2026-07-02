@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Tournament Management | GameVerse Admin</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="C:\Users\3227076\Downloads\OneDrive_2026-07-01\Balamurugan - 3227076\styles\Admin-Tournament.css">
+          <script src="../scripts/common.js"/>
+    <script src="../scripts/admin-utils.js">
+    </script>
+    <script src="../scripts/tournament.js"></script>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">🎮</div>
+
+        <div>
+
+            <h2>GAMEVERSE</h2>
+
+            <span>Admin Panel</span>
+
+        </div>
+
+    </div>
+
+    <ul class="menu">
+
+        <li class="active">
+            <!-- Change active class for each page -->
+            <a href="Admin-Dashboard.html">
+                <i class="ri-dashboard-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-User-Verification.html">
+                <i class="ri-user-search-line"></i>
+                User Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Influencer-Verification.html">
+                <i class="ri-user-star-line"></i>
+                Influencer Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Brand-Verification.html">
+                <i class="ri-building-line"></i>
+                Brand Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Tournament.html">
+                <i class="ri-trophy-line"></i>
+                Tournament Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-subcriptions.html">
+                <i class="ri-vip-crown-line"></i>
+                Subscription Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Report.html">
+                <i class="ri-file-chart-line"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Analytics.html">
+                <i class="ri-bar-chart-box-line"></i>
+                Analytics
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Settings.html">
+                <i class="ri-settings-3-line"></i>
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-activity-logs.html">
+                <i class="ri-history-line"></i>
+                Activity Logs
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-System-logs.html">
+                <i class="ri-server-line"></i>
+                System Status
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-support-tickets.html">
+                <i class="ri-customer-service-2-line"></i>
+                Support Tickets
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="ri-logout-box-r-line"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+    <!-- ====================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ====================================== -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="ri-search-line"></i>
+
+                <input
+                    type="text"
+                    placeholder="Search tournaments, organizers, games...">
+
+            </div>
+
+            <div class="top-right">
+
+                <button class="notification">
+
+                    <i class="ri-notification-3-line"></i>
+
+                </button>
+
+                <button class="notification">
+
+                    <i class="ri-mail-line"></i>
+
+                </button>
+
+                <button class="notification">
+
+                    <i class="ri-question-line"></i>
+
+                </button>
+
+                <div class="admin-profile">
+
+                    <img src="https://i.pravatar.cc/100?img=12">
+
+                    <div>
+
+                        <h4>Admin User</h4>
+
+                        <span>Super Admin</span>
+
+                    </div>
+
+                    <i class="ri-arrow-down-s-line"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ====================================== -->
+        <!-- PAGE HEADER -->
+        <!-- ====================================== -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>Tournament Management</h1>
+
+                <p>
+
+                    Dashboard /
+
+                    <span>Tournaments</span>
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+        <!-- STATISTICS -->
+        <!-- ====================================== -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="icon purple">
+
+                    <i class="ri-trophy-line"></i>
+
+                </div>
+
+                <h5>Total Tournaments</h5>
+
+                <h2>421</h2>
+
+                <span>All Time Tournaments</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon cyan">
+
+                    <i class="ri-play-circle-line"></i>
+
+                </div>
+
+                <h5>Active</h5>
+
+                <h2>68</h2>
+
+                <span>Currently Running</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon yellow">
+
+                    <i class="ri-calendar-event-line"></i>
+
+                </div>
+
+                <h5>Upcoming</h5>
+
+                <h2>24</h2>
+
+                <span>Starting Soon</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon green">
+
+                    <i class="ri-checkbox-circle-line"></i>
+
+                </div>
+
+                <h5>Completed</h5>
+
+                <h2>318</h2>
+
+                <span>Successfully Completed</span>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+        <!-- PART 2 STARTS HERE -->
+        <!-- ====================================== -->
+<!-- ====================================== -->
+        <!-- FILTER SECTION -->
+        <!-- ====================================== -->
+
+        <section class="filter-card">
+
+            <div class="filter-grid">
+
+                <div class="input-group">
+
+                    <label>Search Tournament</label>
+
+                    <div class="table-search">
+
+                        <i class="ri-search-line"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search by tournament name...">
+
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Game</label>
+
+                    <select>
+
+                        <option>All Games</option>
+                        <option>BGMI</option>
+                        <option>Valorant</option>
+                        <option>Free Fire</option>
+                        <option>CODM</option>
+                        <option>PUBG</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Status</label>
+
+                    <select>
+
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Upcoming</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Date Range</label>
+
+                    <input
+                        type="date">
+
+                </div>
+
+            </div>
+
+            <div class="filter-buttons">
+
+                <button class="primary-btn">
+
+                    <i class="ri-filter-3-line"></i>
+
+                    Filter
+
+                </button>
+
+                <button class="secondary-btn">
+
+                    <i class="ri-refresh-line"></i>
+
+                    Reset
+
+                </button>
+
+                <button class="primary-btn add-btn">
+
+                    <i class="ri-add-line"></i>
+
+                    Add Tournament
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+        <!-- TOURNAMENT TABLE -->
+        <!-- ====================================== -->
+
+        <section class="table-card">
+
+            <div class="table-title">
+
+                <h3>Tournaments List</h3>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>#</th>
+                        <th>Tournament</th>
+                        <th>Game</th>
+                        <th>Organizer</th>
+                        <th>Start</th>
+                        <th>End</th>
+                        <th>Status</th>
+                        <th>Teams</th>
+                        <th>Actions</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1</td>
+
+                        <td>BGMI Championship</td>
+
+                        <td>BGMI</td>
+
+                        <td>GameVerse</td>
+
+                        <td>15 Jul 2026</td>
+
+                        <td>20 Jul 2026</td>
+
+                        <td>
+
+                            <span class="badge approved">
+
+                                Active
+
+                            </span>
+
+                        </td>
+
+                        <td>64 / 64</td>
+
+                        <td>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-eye-line"></i>
+
+                            </button>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-more-2-fill"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2</td>
+
+                        <td>Valorant Cup</td>
+
+                        <td>Valorant</td>
+
+                        <td>Red Bull</td>
+
+                        <td>22 Jul 2026</td>
+
+                        <td>25 Jul 2026</td>
+
+                        <td>
+
+                            <span class="badge pending">
+
+                                Upcoming
+
+                            </span>
+
+                        </td>
+
+                        <td>12 / 32</td>
+
+                        <td>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-eye-line"></i>
+
+                            </button>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-more-2-fill"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3</td>
+
+                        <td>Free Fire League</td>
+
+                        <td>Free Fire</td>
+
+                        <td>ASUS</td>
+
+                        <td>01 Jul 2026</td>
+
+                        <td>05 Jul 2026</td>
+
+                        <td>
+
+                            <span class="badge success">
+
+                                Completed
+
+                            </span>
+
+                        </td>
+
+                        <td>48 / 48</td>
+
+                        <td>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-eye-line"></i>
+
+                            </button>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-more-2-fill"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>4</td>
+
+                        <td>COD Masters</td>
+
+                        <td>CODM</td>
+
+                        <td>AMD</td>
+
+                        <td>28 Jun 2026</td>
+
+                        <td>30 Jun 2026</td>
+
+                        <td>
+
+                            <span class="badge rejected">
+
+                                Cancelled
+
+                            </span>
+
+                        </td>
+
+                        <td>10 / 16</td>
+
+                        <td>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-eye-line"></i>
+
+                            </button>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-more-2-fill"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>5</td>
+
+                        <td>PUBG Pro Series</td>
+
+                        <td>PUBG</td>
+
+                        <td>NVIDIA</td>
+
+                        <td>10 Aug 2026</td>
+
+                        <td>15 Aug 2026</td>
+
+                        <td>
+
+                            <span class="badge review2">
+
+                                Upcoming
+
+                            </span>
+
+                        </td>
+
+                        <td>0 / 64</td>
+
+                        <td>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-eye-line"></i>
+
+                            </button>
+
+                            <button class="icon-btn">
+
+                                <i class="ri-more-2-fill"></i>
+
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="pagination-area">
+
+                <p>
+
+                    Showing 1 to 5 of 12 Results
+
+                </p>
+
+                <div class="pagination">
+
+                    <button>
+
+                        <i class="ri-arrow-left-s-line"></i>
+
+                    </button>
+
+                    <button class="active-page">
+
+                        1
+
+                    </button>
+
+                    <button>2</button>
+
+                    <button>3</button>
+
+                    <button>
+
+                        <i class="ri-arrow-right-s-line"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ====================================== -->
+        <!-- PART 3 STARTS HERE -->
+        <!-- ====================================== -->
+<!-- ====================================== -->
+<!-- TOURNAMENT DETAILS -->
+<!-- ====================================== -->
+
+<div class="content-wrapper">
+
+    <section class="details-card">
+
+        <h3>Tournament Details</h3>
+
+        <div class="tournament-details">
+
+            <div class="poster">
+
+                <img src="images/bgmi-poster.jpg"
+                    alt="BGMI Championship">
+
+            </div>
+
+            <div class="details-content">
+
+                <div class="info-row">
+
+                    <span>Tournament Name</span>
+
+                    <strong>BGMI Championship</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Game</span>
+
+                    <strong>BGMI</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Organizer</span>
+
+                    <strong>GameVerse</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Start Date</span>
+
+                    <strong>15 Jul 2026</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>End Date</span>
+
+                    <strong>20 Jul 2026</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Registration Deadline</span>
+
+                    <strong>12 Jul 2026</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Teams Registered</span>
+
+                    <strong>64 / 64</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Prize Pool</span>
+
+                    <strong>₹2,00,000</strong>
+
+                </div>
+
+                <div class="info-row">
+
+                    <span>Status</span>
+
+                    <span class="badge approved">
+
+                        Active
+
+                    </span>
+
+                </div>
+
+                <div class="description">
+
+                    <h4>Description</h4>
+
+                    <p>
+
+                        National level BGMI championship for professional
+                        and semi-professional esports teams with live
+                        streaming and official rankings.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ====================================== -->
+    <!-- RIGHT PANEL -->
+    <!-- ====================================== -->
+
+    <aside class="details-panel">
+
+        <!-- ADMIN ACTIONS -->
+
+        <div class="panel-card">
+
+            <h3>Admin Actions</h3>
+
+            <div class="admin-actions">
+
+                <button class="approve-btn">
+
+                    <i class="ri-checkbox-circle-line"></i>
+
+                    Approve Tournament
+
+                </button>
+
+                <button class="warning-btn">
+
+                    <i class="ri-edit-box-line"></i>
+
+                    Edit Tournament
+
+                </button>
+
+                <button class="reject-btn">
+
+                    <i class="ri-close-circle-line"></i>
+
+                    Reject Tournament
+
+                </button>
+
+                <button class="delete-btn">
+
+                    <i class="ri-delete-bin-line"></i>
+
+                    Delete Tournament
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- QUICK STATS -->
+
+        <div class="panel-card">
+
+            <h3>Quick Stats</h3>
+
+            <div class="quick-stats">
+
+                <div class="stat-box">
+
+                    <h2>64</h2>
+
+                    <span>Total Teams</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h2>64</h2>
+
+                    <span>Registered</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h2>18</h2>
+
+                    <span>Matches Played</span>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h2>₹2L</h2>
+
+                    <span>Prize Pool</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<!-- ====================================== -->
+<!-- FOOTER -->
+<!-- ====================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 GameVerse Admin Dashboard. All Rights Reserved.
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

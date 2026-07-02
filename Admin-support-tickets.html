@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Support Tickets | Gaming & Esports Admin</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Remix Icons -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="C:\Users\3203454\Documents\esports\styles\Admin-support-tickets.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+ <!-- ========================= -->
+    <!-- SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+
+    <div class="logo">
+
+        <div class="logo-icon">🎮</div>
+
+        <div>
+
+            <h2>GAMEVERSE</h2>
+
+            <span>Admin Panel</span>
+
+        </div>
+
+    </div>
+
+    <ul class="menu">
+
+        <li class="active">
+            <!-- Change active class for each page -->
+            <a href="Admin-Dashboard.html">
+                <i class="ri-dashboard-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-User-Verification.html">
+                <i class="ri-user-search-line"></i>
+                User Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Influencer-Verification.html">
+                <i class="ri-user-star-line"></i>
+                Influencer Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Brand-Verification.html">
+                <i class="ri-building-line"></i>
+                Brand Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Tournament.html">
+                <i class="ri-trophy-line"></i>
+                Tournament Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-subcriptions.html">
+                <i class="ri-vip-crown-line"></i>
+                Subscription Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Report.html">
+                <i class="ri-file-chart-line"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Analytics.html">
+                <i class="ri-bar-chart-box-line"></i>
+                Analytics
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Settings.html">
+                <i class="ri-settings-3-line"></i>
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-activity-logs.html">
+                <i class="ri-history-line"></i>
+                Activity Logs
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-System-logs.html">
+                <i class="ri-server-line"></i>
+                System Status
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-support-tickets.html">
+                <i class="ri-customer-service-2-line"></i>
+                Support Tickets
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="ri-logout-box-r-line"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="topbar">
+
+            <div class="search-box">
+
+                <i class="ri-search-line"></i>
+
+                <input type="text"  id="ticketSearch"
+                       placeholder="Search users, influencers, brands, tournaments...">
+
+            </div>
+
+            <div class="top-right">
+
+                <button class="notification">
+
+                    <i class="ri-notification-3-line"></i>
+
+                    <span>3</span>
+
+                </button>
+
+                <button class="notification">
+
+                    <i class="ri-mail-line"></i>
+
+                    <span>5</span>
+
+                </button>
+
+                <div class="admin-profile">
+
+                    <img src="images/admin.jpg"
+                         alt="Admin">
+
+                    <div>
+
+                        <h4>Admin User</h4>
+
+                        <span>Super Admin</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= PAGE HEADER ================= -->
+
+        <section class="page-header">
+
+            <div>
+
+                <h1>Support Tickets</h1>
+
+
+            </div>
+
+        </section>
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="icon purple">
+
+                    <i class="ri-file-list-3-line"></i>
+
+                </div>
+
+                <h5>Total Tickets</h5>
+
+                <h2>124</h2>
+
+                <span>All Tickets</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon green">
+
+                    <i class="ri-checkbox-circle-line"></i>
+
+                </div>
+
+                <h5>Open Tickets</h5>
+
+                <h2>32</h2>
+
+                <span>Need Response</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon orange">
+
+                    <i class="ri-time-line"></i>
+
+                </div>
+
+                <h5>In Progress</h5>
+
+                <h2>18</h2>
+
+                <span>Being Processed</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon red">
+
+                    <i class="ri-close-circle-line"></i>
+
+                </div>
+
+                <h5>Resolved</h5>
+
+                <h2>64</h2>
+
+                <span>Completed</span>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon cyan">
+
+                    <i class="ri-lock-line"></i>
+
+                </div>
+
+                <h5>Closed</h5>
+
+                <h2>10</h2>
+
+                <span>Closed Tickets</span>
+
+            </div>
+
+        </section>
+
+        <!-- ================= -->
+        <!-- PART 2 STARTS -->
+        <!-- ================= -->
+
+<!-- ===================================== -->
+<!-- SEARCH + FILTER + TICKET STATS -->
+<!-- ===================================== -->
+
+<div class="support-grid">
+
+    <!-- ================= SEARCH & FILTER ================= -->
+
+    <section class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>Search Tickets</h2>
+
+        </div>
+
+        <div class="filter-grid">
+
+            <div class="form-group">
+
+                <label>Search</label>
+
+                <div class="search-input">
+
+                    <i class="ri-search-line"></i>
+
+                    <input type="text"
+                           placeholder="Search by ID, name or email...">
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Status</label>
+
+                <select id="statusFilter">
+
+                    <option>All Status</option>
+                    <option>Open</option>
+                    <option>In Progress</option>
+                    <option>Resolved</option>
+                    <option>Closed</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Category</label>
+
+               <select id="categoryFilter">
+
+                    <option>All Categories</option>
+                    <option>Account</option>
+                    <option>Payment</option>
+                    <option>Technical</option>
+                    <option>Tournament</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Date</label>
+
+                <input type="date" id="dateFilter">
+
+            </div>
+
+        </div>
+
+        <div class="filter-buttons">
+
+            <button class="primary-btn" id="filterBtn">
+
+                <i class="ri-filter-3-line"></i>
+
+                Filter
+
+            </button>
+
+            <button class="secondary-btn" id="resetBtn">
+
+                Reset
+
+            </button>
+
+            <button class="primary-btn add-ticket-btn">
+
+                <i class="ri-add-line"></i>
+
+                New Ticket
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TICKET STATISTICS ================= -->
+
+    <aside class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>Ticket Statistics</h2>
+
+        </div>
+
+        <div class="chart-placeholder">
+
+            <img src="images/ticket-statistics.png"
+                 alt="Ticket Statistics">
+
+        </div>
+
+        <div class="distribution-list">
+
+          
+
+        </div>
+
+    </aside>
+
+</div>
+
+<!-- ===================================== -->
+<!-- PART 3 STARTS HERE -->
+<!-- ===================================== -->
+
+<!-- ===================================== -->
+<!-- SUPPORT TICKETS TABLE + RECENT TICKETS -->
+<!-- ===================================== -->
+
+<div class="support-main-grid">
+
+    <!-- ================= TICKETS TABLE ================= -->
+
+    <section class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>Support Tickets</h2>
+
+        </div>
+
+        <table class="data-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Ticket ID</th>
+
+                    <th>User</th>
+
+                    <th>Category</th>
+
+                    <th>Subject</th>
+
+                    <th>Status</th>
+
+                    <th>Priority</th>
+
+                    <th>Created</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+<tbody id="ticketTableBody">
+
+</tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= RECENT TICKETS ================= -->
+
+    <aside class="dashboard-card">
+
+        <div class="card-header">
+
+            <h2>Recent Tickets</h2>
+
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="activity-list">
+
+            <div class="activity-item">
+
+                <i class="ri-user-line purple-icon"></i>
+
+                <div>
+
+                    <h4>Unable to Login</h4>
+
+                    <p>#TKT-1245 • Rohit Gamer</p>
+
+                </div>
+
+                <span class="badge success">Open</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-money-dollar-circle-line green-icon"></i>
+
+                <div>
+
+                    <h4>Payment Failed</h4>
+
+                    <p>#TKT-1244 • GamerX Pro</p>
+
+                </div>
+
+                <span class="badge warning">In Progress</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-settings-3-line cyan-icon"></i>
+
+                <div>
+
+                    <h4>Match Not Starting</h4>
+
+                    <p>#TKT-1243 • Tech Blaze</p>
+
+                </div>
+
+                <span class="badge success">Open</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-chat-3-line blue-icon"></i>
+
+                <div>
+
+                    <h4>General Query</h4>
+
+                    <p>#TKT-1242 • Aman YT</p>
+
+                </div>
+
+                <span class="badge warning">In Progress</span>
+
+            </div>
+
+            <div class="activity-item">
+
+                <i class="ri-mail-line red-icon"></i>
+
+                <div>
+
+                    <h4>Change Email</h4>
+
+                    <p>#TKT-1241 • Pro Player</p>
+
+                </div>
+
+                <span class="badge success">Resolved</span>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<!-- ===================================== -->
+<!-- PART 4 STARTS HERE -->
+<!-- ===================================== -->
+
+<!-- ===================================== -->
+<!-- SUPPORT CATEGORIES -->
+<!-- ===================================== -->
+
+<section class="dashboard-card">
+
+    <div class="card-header">
+
+        <h2>Support Categories</h2>
+
+        <span>This Month</span>
+
+    </div>
+
+    <div class="verification-item">
+
+        <div class="verify-title">
+
+            <span>Account Issues</span>
+
+            <strong>35%</strong>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar purple"
+                 style="width:35%"></div>
+
+        </div>
+
+    </div>
+
+    <div class="verification-item">
+
+        <div class="verify-title">
+
+            <span>Payment Issues</span>
+
+            <strong>20%</strong>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar green"
+                 style="width:20%"></div>
+
+        </div>
+
+    </div>
+
+    <div class="verification-item">
+
+        <div class="verify-title">
+
+            <span>Technical Support</span>
+
+            <strong>25%</strong>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar cyan"
+                 style="width:25%"></div>
+
+        </div>
+
+    </div>
+
+    <div class="verification-item">
+
+        <div class="verify-title">
+
+            <span>Tournament Issues</span>
+
+            <strong>15%</strong>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar orange"
+                 style="width:15%"></div>
+
+        </div>
+
+    </div>
+
+    <div class="verification-item">
+
+        <div class="verify-title">
+
+            <span>Other Queries</span>
+
+            <strong>5%</strong>
+
+        </div>
+
+        <div class="progress">
+
+            <div class="progress-bar red"
+                 style="width:5%"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SUPPORT SUMMARY -->
+<!-- ===================================== -->
+
+<section class="dashboard-card">
+
+    <div class="card-header">
+
+        <h2>Support Performance</h2>
+
+    </div>
+
+    <div class="quick-stats-grid">
+
+        <div class="quick-stat">
+
+            <i class="ri-timer-line"></i>
+
+            <h3>12 min</h3>
+
+            <span>Average Response Time</span>
+
+        </div>
+
+        <div class="quick-stat">
+
+            <i class="ri-checkbox-circle-line"></i>
+
+            <h3>94%</h3>
+
+            <span>Resolution Rate</span>
+
+        </div>
+
+        <div class="quick-stat">
+
+            <i class="ri-star-smile-line"></i>
+
+            <h3>4.8/5</h3>
+
+            <span>User Satisfaction</span>
+
+        </div>
+
+        <div class="quick-stat">
+
+            <i class="ri-customer-service-2-line"></i>
+
+            <h3>3</h3>
+
+            <span>Support Agents</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FOOTER -->
+<!-- ===================================== -->
+
+<footer class="dashboard-footer">
+
+    <p>
+
+        © 2026 GameVerse Admin Dashboard |
+        Support Ticket Management
+
+    </p>
+
+</footer>
+
+</main>
+
+</div>
+
+<script src="script2.js"></script>
+
+</body>
+
+</html>
