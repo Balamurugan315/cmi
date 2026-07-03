@@ -368,7 +368,7 @@ function renderActivityLogs() {
 
                     ${log.admin}
 
-                    â€¢
+                    -
 
                     ${log.module}
 
@@ -474,7 +474,7 @@ function initializeNotifications() {
 
         alert(
 
-            "ðŸ”” You have " +
+            "You have " +
 
             pendingRequests.textContent +
 
@@ -502,7 +502,7 @@ function initializeMail() {
 
         alert(
 
-            "ðŸ“§ Inbox feature will be available soon."
+            "Inbox feature will be available soon."
 
         );
 
@@ -1372,3 +1372,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
