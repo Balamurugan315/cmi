@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournament Management | GameVerse Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/Admin-Tournament.css">
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/admin-utils.js" defer></script>
+  <script src="scripts/tournament.js" defer></script>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar" aria-label="Admin navigation">
+      <a class="logo" href="Admin-Dashboard.html" aria-label="GameVerse admin dashboard">
+        <span class="logo-icon"><i class="ri-gamepad-line"></i></span>
+        <span><strong>GAMING & ESPORTS</strong><small>Admin Panel</small></span>
+      </a>
+
+      <nav class="menu">
+        <a href="Admin-Dashboard.html"><i class="ri-home-5-line"></i><span>Dashboard</span></a>
+        <a href="Admin-User-Verification.html"><i class="ri-user-search-line"></i><span>User Verification</span></a>
+        <a href="Admin-Influencer-Verification.html"><i class="ri-user-star-line"></i><span>Influencer Verification</span></a>
+        <a href="Admin-Brand-Verification.html"><i class="ri-file-list-3-line"></i><span>Brand Verification</span></a>
+        <a class="active" href="Admin-Tournament.html"><i class="ri-trophy-line"></i><span>Tournament Management</span></a>
+        <a href="Admin-subcriptions.html"><i class="ri-vip-crown-line"></i><span>Subscription Management</span></a>
+        <a href="Admin-Report.html"><i class="ri-file-chart-line"></i><span>Reports</span></a>
+        <a href="Admin-Analytics.html"><i class="ri-bar-chart-box-line"></i><span>Analytics</span></a>
+        <a href="Admin-Settings.html"><i class="ri-settings-3-line"></i><span>Settings</span></a>
+        <span class="menu-divider"></span>
+        <a href="Admin-activity-logs.html"><i class="ri-history-line"></i><span>Activity Logs</span></a>
+        <a href="Admin-System-logs.html"><i class="ri-server-line"></i><span>System Status</span></a>
+        <a href="Admin-support-tickets.html"><i class="ri-customer-service-2-line"></i><span>Support Tickets</span></a>
+        <a href="#"><i class="ri-logout-box-r-line"></i><span>Logout</span></a>
+      </nav>
+
+      <div class="sidebar-art" aria-hidden="true">
+        <i class="ri-gamepad-line"></i>
+        <strong>GAME ON</strong>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" type="button" aria-label="Open navigation"><i class="ri-menu-line"></i></button>
+        <div class="global-search">
+          <i class="ri-search-line"></i>
+          <input id="globalSearch" type="search" placeholder="Search users, influencers, brands, tournaments..." autocomplete="off">
+          <div class="search-results" id="searchResults" hidden></div>
+        </div>
+        <div class="top-right">
+          <button class="notification" type="button" aria-label="Notifications"><i class="ri-notification-3-line"></i><span>3</span></button>
+          <button class="notification" type="button" aria-label="Messages"><i class="ri-mail-line"></i><span>5</span></button>
+          <div class="admin-profile">
+            <img src="https://i.pravatar.cc/100?img=12" alt="Admin User">
+            <span><strong>Admin User</strong><small>Super Admin</small></span>
+            <i class="ri-arrow-down-s-line"></i>
+          </div>
+        </div>
+      </header>
+
+      <section class="page-header">
+        <div>
+          <h1>Tournament Management</h1>
+          <p>Dashboard <i class="ri-arrow-right-s-line"></i> <span>Tournaments</span></p>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Tournament statistics">
+        <article class="stat-card purple"><span><i class="ri-trophy-line"></i></span><div><small>Total Tournaments</small><strong id="totalCount">0</strong><p>All time tournaments</p></div></article>
+        <article class="stat-card cyan"><span><i class="ri-play-circle-line"></i></span><div><small>Active Tournaments</small><strong id="activeCount">0</strong><p>Currently running</p></div></article>
+        <article class="stat-card amber"><span><i class="ri-calendar-event-line"></i></span><div><small>Upcoming Tournaments</small><strong id="upcomingCount">0</strong><p>Starting soon</p></div></article>
+        <article class="stat-card green"><span><i class="ri-checkbox-circle-line"></i></span><div><small>Completed Tournaments</small><strong id="completedCount">0</strong><p>Successfully completed</p></div></article>
+      </section>
+
+      <section class="filter-card" aria-label="Tournament filters">
+        <div class="filter-grid">
+          <label class="field">Search Tournament
+            <span class="input-shell"><input id="nameFilter" type="search" placeholder="Search by tournament name..."><button class="field-reset" type="button" data-reset="nameFilter" aria-label="Reset tournament search"><i class="ri-close-line"></i></button></span>
+          </label>
+          <label class="field">Game
+            <span class="input-shell"><select id="gameFilter"><option value="">All Games</option><option>BGMI</option><option>Valorant</option><option>Free Fire</option><option>CODM</option><option>PUBG</option><option>Minecraft</option></select><button class="field-reset" type="button" data-reset="gameFilter" aria-label="Reset game filter"><i class="ri-close-line"></i></button></span>
+          </label>
+          <label class="field">Status
+            <span class="input-shell"><select id="statusFilter"><option value="">All Status</option><option>Active</option><option>Upcoming</option><option>Completed</option><option>Cancelled</option></select><button class="field-reset" type="button" data-reset="statusFilter" aria-label="Reset status filter"><i class="ri-close-line"></i></button></span>
+          </label>
+          <label class="field">Date Range
+            <span class="date-range"><input id="startFilter" type="date" aria-label="Start date"><input id="endFilter" type="date" aria-label="End date"><button class="field-reset" type="button" data-reset="dateRange" aria-label="Reset date filter"><i class="ri-close-line"></i></button></span>
+          </label>
+        </div>
+        <div class="filter-buttons">
+          <button class="primary-btn" id="filterBtn" type="button"><i class="ri-filter-3-line"></i>Filter</button>
+          <button class="secondary-btn" id="resetBtn" type="button"><i class="ri-refresh-line"></i>Reset All</button>
+          <button class="primary-btn add-btn" id="addTournamentBtn" type="button"><i class="ri-add-line"></i>Add Tournament</button>
+        </div>
+      </section>
+
+      <section class="table-card">
+        <div class="section-title"><h2>Tournaments List</h2><span id="resultSummary">Showing 0 results</span></div>
+        <div class="table-wrap">
+          <table id="tournamentTable">
+            <thead><tr><th>#</th><th>Tournament Name</th><th>Game</th><th>Organizer</th><th>Start Date</th><th>End Date</th><th>Status</th><th>Teams</th><th>Actions</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="pagination-area"><p id="pageSummary">Showing 0 to 0 of 0 results</p><div class="pagination" id="pagination"></div></div>
+      </section>
+
+      <div class="content-wrapper">
+        <section class="details-card">
+          <h2>Tournament Details</h2>
+          <div class="tournament-details" id="detailsPanel"></div>
+        </section>
+        <aside class="details-panel">
+          <section class="panel-card"><h2>Admin Actions</h2><div class="admin-actions">
+            <button class="approve-btn" data-action="approve" type="button"><i class="ri-checkbox-circle-line"></i>Approve Tournament</button>
+            <button class="warning-btn" data-action="edit" type="button"><i class="ri-edit-box-line"></i>Edit Tournament</button>
+            <button class="reject-btn" data-action="reject" type="button"><i class="ri-close-circle-line"></i>Reject Tournament</button>
+            <button class="delete-btn" data-action="delete" type="button"><i class="ri-delete-bin-line"></i>Delete Tournament</button>
+          </div></section>
+          <section class="panel-card"><h2>Quick Stats</h2><div class="quick-stats" id="quickStats"></div></section>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <dialog class="modal" id="tournamentModal">
+    <form id="tournamentForm" method="dialog" novalidate>
+      <header><h2 id="modalTitle">Add Tournament</h2><button type="button" class="icon-action" id="closeModal" aria-label="Close"><i class="ri-close-line"></i></button></header>
+      <div class="form-grid">
+        <label class="field">Tournament Name<input id="tournamentName" name="name" required minlength="3" maxlength="60"></label>
+        <label class="field">Game<select id="tournamentGame" name="game" required><option value="">Select game</option><option>BGMI</option><option>Valorant</option><option>Free Fire</option><option>CODM</option><option>PUBG</option><option>Minecraft</option></select></label>
+        <label class="field">Organizer<input id="organizer" name="organizer" required minlength="2" maxlength="45"></label>
+        <label class="field">Status<select id="tournamentStatus" name="status" required><option>Active</option><option>Upcoming</option><option>Completed</option><option>Cancelled</option></select></label>
+        <label class="field">Start Date<input id="startDate" name="startDate" type="date" required></label>
+        <label class="field">End Date<input id="endDate" name="endDate" type="date" required></label>
+        <label class="field">Teams Registered<input id="registeredTeams" name="registeredTeams" type="number" min="0" required></label>
+        <label class="field">Total Teams<input id="totalTeams" name="totalTeams" type="number" min="1" required></label>
+        <label class="field">Prize Pool (INR)<input id="prizePool" name="prizePool" type="number" min="0" step="1000" required></label>
+        <label class="field wide">Description<textarea id="description" name="description" rows="4" required minlength="10" maxlength="220"></textarea></label>
+      </div>
+      <p class="form-error" id="formError" role="alert"></p>
+      <footer><button class="secondary-btn" type="button" id="cancelModal">Cancel</button><button class="primary-btn" type="submit"><i class="ri-save-3-line"></i>Save Tournament</button></footer>
+    </form>
+  </dialog>
+</body>
+</html>
+
+
+

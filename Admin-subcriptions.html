@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Subscription Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<link rel="stylesheet" href="styles/Admin-subcriptions.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+    <aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">ðŸŽ®</div>
+
+<div>
+<h2>GAMEVERSE</h2>
+<span>Admin Panel</span>
+</div>
+
+</div>
+
+<ul class="menu">
+
+        <li class="active">
+            <!-- Change active class for each page -->
+            <a href="Admin-Dashboard.html">
+                <i class="ri-dashboard-line"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-User-Verification.html">
+                <i class="ri-user-search-line"></i>
+                User Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Influencer-Verification.html">
+                <i class="ri-user-star-line"></i>
+                Influencer Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Brand-Verification.html">
+                <i class="ri-building-line"></i>
+                Brand Verification
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Tournament.html">
+                <i class="ri-trophy-line"></i>
+                Tournament Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-subcriptions.html">
+                <i class="ri-vip-crown-line"></i>
+                Subscription Management
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Report.html">
+                <i class="ri-file-chart-line"></i>
+                Reports
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Analytics.html">
+                <i class="ri-bar-chart-box-line"></i>
+                Analytics
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-Settings.html">
+                <i class="ri-settings-3-line"></i>
+                Settings
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-activity-logs.html">
+                <i class="ri-history-line"></i>
+                Activity Logs
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-System-logs.html">
+                <i class="ri-server-line"></i>
+                System Status
+            </a>
+        </li>
+
+        <li>
+            <a href="Admin-support-tickets.html">
+                <i class="ri-customer-service-2-line"></i>
+                Support Tickets
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="ri-logout-box-r-line"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</aside>
+<main class="main-content">
+
+<header class="topbar">
+
+<div class="search-box">
+
+<i class="ri-search-line"></i>
+
+<input
+type="text" id="globalSearch"
+placeholder="Search users, influencers, brands, tournaments...">
+
+</div>
+
+<div class="top-right">
+
+<button class="notification">
+<i class="ri-notification-3-line"></i>
+</button>
+
+<div class="admin-profile">
+
+<img src="https://i.pravatar.cc/100?img=12">
+
+<div>
+
+<h4>Admin User</h4>
+<span>Administrator</span>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+<section class="page-header">
+
+<h1>Subscription Management</h1>
+
+<p>
+
+Dashboard
+
+<i class="ri-arrow-right-s-line"></i>
+
+Subscription Management
+
+</p>
+
+</section>
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <h5>Total Subscribers</h5>
+        <h2 id="totalSubscribers">0</h2>
+        <span>Registered Users</span>
+    </div>
+
+    <div class="stat-card">
+        <h5>Active Subscriptions</h5>
+        <h2 id="activeSubscriptions">0</h2>
+        <span>Currently Active</span>
+    </div>
+
+    <div class="stat-card">
+        <h5>Expired / Cancelled</h5>
+        <h2 id="expiredSubscriptions">0</h2>
+        <span>Inactive Plans</span>
+    </div>
+
+    <div class="stat-card">
+        <h5>Monthly Revenue</h5>
+        <h2 id="monthlyRevenue">$0</h2>
+        <span>Current Revenue</span>
+    </div>
+
+    <div class="stat-card">
+        <h5>Annual Revenue</h5>
+        <h2 id="annualRevenue">$0</h2>
+        <span>Total Revenue</span>
+    </div>
+
+    <div class="stat-card">
+        <h5>Pending Payments</h5>
+        <h2 id="pendingPayments">0</h2>
+        <span>Awaiting Payment</span>
+    </div>
+
+</section>
+
+<div class="subscription-grid">
+
+<div class="left-panel">
+<div class="tabs">
+</div>
+<section class="filter-card">
+
+<div class="filter-row">
+
+<div class="table-search">
+
+<i class="ri-search-line"></i>
+
+<input
+type="text"
+placeholder="Search by user, email or company...">
+
+</div>
+
+<div class="filters">
+
+    <select id="roleFilter">
+    <option value="all">All Roles</option>
+    <option value="User">User</option>
+    <option value="Influencer">Influencer</option>
+    <option value="Brand">Brand</option>
+    <option value="Tournament Organizer">
+        Tournament Organizer
+    </option>
+</select>
+
+<select id="planFilter">
+    <option value="all">All Plans</option>
+    <option value="Free">Free</option>
+    <option value="Premium">Premium</option>
+    <option value="Enterprise">Enterprise</option>
+</select>
+
+<select id="statusFilter">
+    <option value="all">All Status</option>
+    <option value="Active">Active</option>
+    <option value="Past Due">Past Due</option>
+    <option value="Cancelled">Cancelled</option>
+</select>
+
+<select id="billingFilter">
+    <option value="all">All Billing</option>
+    <option value="Monthly">Monthly</option>
+    <option value="Annual">Annual</option>
+</select>
+
+   
+     
+
+    <input type="date" class="date-input">
+
+    <button id="filterBtn" class="secondary-btn">
+        <i class="ri-filter-3-line"></i>
+        Filter
+    </button>
+
+    <button id="resetBtn" class="secondary-btn">
+        Reset
+    </button>
+
+</div>
+</section>
+<section class="table-card">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th></th>
+<th>Subscriber</th>
+<th>Role</th>
+<th>Plan</th>
+<th>Billing Cycle</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Start Date</th>
+<th>Next Renewal</th>
+<th>Actions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tbody id="subscriberTableBody">
+
+</tbody>
+
+<tr id="noDataRow" style="display:none;">
+
+    <td colspan="10" class="no-data">
+
+        No subscription records found.
+
+    </td>
+
+</tr>
+</tbody>
+
+</table>
+
+</section>
+
+</div>
+<aside class="right-panel">
+<div class="panel-card">
+
+<div class="card-header">
+
+<h3>Subscription Plans</h3>
+
+<button class="secondary-btn">
+
+Manage Plans
+
+</button>
+
+</div>
+
+<div class="plan-row">
+
+<span>Free</span>
+<strong>$0</strong>
+
+</div>
+
+<div class="plan-row">
+
+<span>Premium</span>
+<strong>$29 / month</strong>
+
+</div>
+
+<div class="plan-row">
+
+<span>Enterprise</span>
+<strong>$499 / year</strong>
+
+</div>
+
+<div class="plan-row">
+
+<span>Custom</span>
+<strong>-</strong>
+
+</div>
+
+</div>
+<div class="panel-card">
+
+<h3>Payment Status</h3>
+
+<div class="payment-circle"></div>
+
+<div class="payment-list">
+
+<p>
+
+<span class="dot green"></span>
+
+Successful
+
+</p>
+
+<p>
+
+<span class="dot red"></span>
+
+Failed
+
+</p>
+
+<p>
+
+<span class="dot yellow"></span>
+
+Pending
+
+</p>
+
+<p>
+
+<span class="dot blue"></span>
+
+Refunded
+
+</p>
+
+</div>
+
+</div>
+<div class="panel-card">
+
+<div class="card-header">
+
+<h3>Recent Activity</h3>
+
+<a href="#">
+
+View All
+
+</a>
+
+</div>
+
+<ul class="activity-list">
+
+<li>
+
+Payment received from GameX Pro
+
+<span>$499</span>
+
+</li>
+
+<li>
+
+Subscription renewed by Play With Vock
+
+<span>$29</span>
+
+</li>
+
+<li>
+
+Payment failed from BGMI Esports
+
+<span>$29</span>
+
+</li>
+
+<li>
+
+Refund issued to Red Bull Gaming
+
+<span>$29</span>
+
+</li>
+
+<li>
+
+New subscription by Techno Sports
+
+<span>$499</span>
+
+</li>
+
+</ul>
+
+</div>
+</aside>
+
+</div>
+
+</main>
+
+</div>
+</body>
+
+</html>
+
+
